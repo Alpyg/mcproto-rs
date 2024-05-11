@@ -11,24 +11,25 @@ repository = "https://github.com/Twister915/mcproto-rs"
 readme = "README.md"
 
 [dependencies]
-serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
-base64 = { version = "0.12.3", default-features = false, features = ["alloc"] }
-rand = { version = "0.7", optional = true }
+serde_json = { version = "1.0.117", default-features = false, features = [
+  "alloc",
+] }
+base64 = { version = "0.22.1", default-features = false, features = ["alloc"] }
+rand = { version = "0.8.5", optional = true }
 
 [dependencies.serde]
-version = "1.0.116"
-features = [ "derive", "alloc" ]
+version = "1.0.201"
+features = ["derive", "alloc"]
 default-features = false
 
 [dev-dependencies]
-flate2 = "1.0.17"
+flate2 = "1.0.30"
 
 [features]
-default = [ "std", "bench", "v1_15_2", "v1_16_3" ]
+default = ["std", "v1_15_2", "v1_16_3"]
 
-std = [ "rand" ]
-bench = []
 gat = []
 
+std = ["rand"]
 v1_15_2 = []
 v1_16_3 = []
